@@ -1,5 +1,64 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Usage
+import React, { Component } from 'react';
+import Contest from './Contest';
+
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      gameDone: false,
+      message: "",
+    }
+    this.ifGameDone = this.ifGameDone.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+
+  ifGameDone(currentMessage) {
+    this.setState({
+      gameDone: !this.state.gameDone,
+      message: currentMessage,
+    });
+  }
+
+
+  handleClick() {
+    this.setState({
+      gameDone: !this.state.gameDone,
+    })
+  };
+
+  render() {
+    let contestComp = "";
+    if(!this.state.gameDone){
+      const questionList = ["What is the capital of France?", "Who is the drummer for Coldplay?", "What is the tallest building in the world?"]; // can give the question list here
+      const answerList = [["Bern", "Berlin", "Paris", "Tokio"],
+                          ["Dave Grohl", "Roger Taylor", "Dave Abbruzzese", "Will Champion"],
+                          ["Eiffel Tower", "Burj Khalifa", "Shanghai Tower", "Kingdom Clock Tower"]]; // can give the answer list here.
+      const correctAnswers = ["3", "4", "2"]; // can give the correct answers' indexes here.
+      contestComp = (<Contest ifGameDone={this.ifGameDone} questionList={questionList} answerList={answerList} correctAnswers={correctAnswers}/>);
+    }
+    else{
+      contestComp = (<div>
+        <p id="message">{this.state.message}</p>
+        <button style={{display: this.state.gameDone ? "block" : "none"}}id="startOver" onClick={this.handleClick}>Play Again</button>
+      </div>);
+    }
+
+    return(
+      <div>
+        <h1 style={{textAlign: "center"}}>Who Wants To Be A Millionare?</h1>
+        {contestComp}
+      </div>
+    );
+  }
+}
+
+export default App;
+
 ## Available Scripts
 
 In the project directory, you can run:
