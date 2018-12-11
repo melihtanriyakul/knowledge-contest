@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can check the component by using the link here: http://knowledge-contest.surge.sh/
 
 
 ## Usage
