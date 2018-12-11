@@ -1,0 +1,59 @@
+#mainDiv {
+    margin-top: 20px;
+    margin-left: 375px;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    padding-top: 50px;
+    border: 2px rgb(116, 27, 27) solid;
+    border-radius: 5%;
+    background-color: #8b95a5;
+}
+.question {
+    font-weight: bold;
+    margin-top: -20px;
+}
+button {
+    background-color: white;
+    padding: 10px;
+    width: 120px;
+    margin: 5px 10px;
+}
+
+#answers {
+    margin-top: 10px;
+}
+#nextQuestion {
+    margin-left: 250px;
+}
+
+#sureOrNot {
+    font-weight: bold;
+}
+
+#message {
+    font-size: 75px;
+    color: green;
+    margin-top: 20px;
+    margin-left: 375px;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    padding-top: 50px;
+    border: 2px rgb(116, 27, 27) solid;
+    border-radius: 5%;
+    background-color: #282c34;
+}
+#startOver {
+    margin: -250px 590px;
+    width: 175px;
+    height: 50px;
+}
+
+.true {
+    display: block;
+}
+
+.false {
+    display: none;
+}
