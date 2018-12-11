@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Usage
+```
 import React, { Component } from 'react';
 import Contest from './Contest';
 
@@ -58,7 +59,7 @@ class App extends Component {
 }
 
 export default App;
-
+```
 ## Available Scripts
 
 In the project directory, you can run:
