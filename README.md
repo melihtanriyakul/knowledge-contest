@@ -18,7 +18,7 @@ class App extends Component {
   }
 
 
-  ifGameDone(currentMessage) {
+  ifGameDone(currentMessage) {  // this is the callback function for the message when the final question answered
     this.setState({
       gameDone: !this.state.gameDone,
       message: currentMessage,
